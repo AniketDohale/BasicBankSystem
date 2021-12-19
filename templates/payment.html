@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/payment.css' %}">
+    <link rel="shortcut icon" type="image/png" href="{% static 'icons/fav.png' %}" />
+    <title>Transfer | Bank System</title>
+</head>
+
+<body>
+    <form method="POST">
+        {% csrf_token %}
+        <div class="wrapper">
+            <header>Transfer Form</header>
+
+            <h4 style="padding-left: 10px; text-align: left;">From: {{custom.first_name}} {{custom.last_name}}</h4>
+            <h4 style="padding-left: 10px; text-align: left;">Email: {{custom.cust_email}}</h4>
+            <h4 style="padding-left: 10px; text-align: left;">Phone: {{custom.cust_phone}}</h4>
+            <h4 style="padding: 10px; text-align: left;">Total Amount: ₹{{custom.cust_amount}}</h4>
+
+            <div class="field from">
+                <div class="input-area">
+                    <input type="text" name="from_user" value="{{custom.first_name}}" readonly>
+                </div>
+            </div>
+
+            <div class="field to">
+                <div class="input-area">
+                    <input type="text" name="to_user" placeholder="To">
+                </div>
+            </div>
+
+            <div class="field amount">
+                <div class="input-area">
+                    <input type="text" name="amount" placeholder="Amount">
+                </div>
+            </div>
+            <input type="submit" value="Transfer" name="submit">
+            <div style="padding: 20px;">
+                <a href="/customers">Cancel</a>
+            </div>
+        </div>
+    </form>
+
+    <div>
+        {% for message in messages %}
+        <div class="alert">
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+            <strong>Failed!</strong> {{ message }}
+        </div>
+        {% endfor %}
+    </div>
+</body>
+
+</html>

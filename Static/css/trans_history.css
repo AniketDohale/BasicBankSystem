@@ -1,0 +1,101 @@
+.back_page {
+    text-align: right;
+    padding-right: 75px;
+    padding-bottom: 20px;
+}
+
+.back_page a {
+    text-decoration: none;
+    padding: 10px 30px;
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: 400;
+    background: #00cccc;
+
+}
+
+.back_page a:hover {
+    background: #262626;
+}
+
+/* Back Button End*/
+
+/*  Customer Table */
+table {
+    border-collapse: collapse;
+    border-radius: 0.5em;
+    overflow: hidden;
+    border-spacing: 0;
+    width: 90%;
+    margin-left: 80px;
+    border: 1px solid #ddd;
+}
+
+.customer_head_1 {
+    max-width: 650px;
+    margin: 60px 100px;
+    color: #226A80;
+    font-size: 50px;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 2px;
+    line-height: 60px;
+    margin-bottom: 30px;
+}
+
+th, td {
+    text-align: center;
+    padding: 15px;
+}
+
+tr:nth-child(odd) {
+    background-color: #f3f3f3;
+}
+
+tr:nth-child(even) {
+    background-color: #fff;
+}
+
+th {
+    background-color: #00cccc;
+    color: white;
+}
+
+tr:nth-child(even):hover {
+    background-color: black;
+    color: white;
+}
+
+tr:nth-child(odd):hover {
+    background-color: black;
+    color: white;
+}
+
+/* Alert Button */
+.alert {
+    position: fixed;
+    left: 0%;
+    bottom: 0%;
+    width: 35%;
+    padding: 15px;
+    background-color: #04AA6D;
+    color: white;
+}
+
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.closebtn:hover {
+    color: black;
+}

@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %} Intro {% endblock title %}
+
+{% block body %}
+
+{% load static %}
+
+<div class="bg_img">
+    <div class="content">
+        <div class="info">
+            <h2> Bank System </h2>
+
+            <h3> The Bank which is Always for you.. </h3>
+
+            <p> Bank that offers Net Banking Services & Personal banking services like Accounts &
+                Deposits. This Bank offers different type of accounts to meet your financial goals and secure your
+                future. Choose from our wide range of deposit products that are specifically designed to keep your
+                unique requirements in mind.</p>
+
+            <a href="/home" class="get-started"> Get Started </a>
+        </div>
+    </div>
+</div>
+
+<div class="media-icons">
+    <a href="https://github.com/AniketDohale" style="padding-left:25px;" target="_blank">
+        <img src="{% static 'icons/github.png' %}"> </a>
+    <a href="https://www.linkedin.com/in/aniket-dohale-0a1589218" style="padding-left:25px;" target="_blank">
+        <img src="{% static 'icons/linkedin.png'%}"> </a>
+</div>
+
+{% endblock body%}

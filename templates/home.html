@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block title %} Home {% endblock title %}
+
+{% block body %}
+
+{% load static %}
+
+<div class="wrapper">
+    <div class="content">
+        <img class="home-bank" src="{% static 'img/home-bank.jpg' %}">
+        <div class="quote-area">
+            <div class="title">Security | Integrity | Trust</div>
+            <div class="text">Welcome, an Ideal destination for Personal Banking needs...!<br>Enjoy Enhanced Secured
+                Banking Experience.</div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="card">
+        <div class="box">
+            <div class="content">
+                <h3>Customers</h3>
+                <img class="cust_img" src="{% static 'img/customers.png' %}">
+                <a href="/customers">View</a>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="box">
+            <div class="content">
+                <h3>History</h3>
+                <img class="history_img" src="{% static 'img/history.png' %}">
+                <a href="/trans_history">Check</a>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="box">
+            <div class="content">
+                <h3>About US</h3>
+                <img class="profile_img" src="{% static 'img/profile.png' %}">
+                <a href="/about">Read More</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock body%}

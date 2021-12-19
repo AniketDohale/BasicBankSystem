@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block title %} History {% endblock title %}
+
+{% block body %}
+
+{% load static %}
+
+<div class="customer_1">
+    <h2 class="customer_head_1">Transaction History</h2>
+
+    <div class="back_page">
+        <a href="/customers">Back</a>
+    </div>
+    <form method="POST">
+        {% csrf_token %}
+        <table>
+
+            <tr>
+                <th>From</th>
+                <th>To</th>
+                <th>Amount</th>
+                <th>Date</th>
+                <th>Time</th>
+            </tr>
+
+            {% for t in trans %}
+            <tr>
+                <td>{{t.from_cust}}</td>
+                <td>{{t.to_cust}}</td>
+                <td>₹{{t.cust_amount}}</td>
+                <td>{{t.date}}</td>
+                <td>{{t.time}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </form>
+
+    <div>
+        {% for message in messages %}
+        <div class="alert success">
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+            <strong>Success!</strong> {{ message }}
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock body%}

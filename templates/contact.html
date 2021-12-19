@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %} Contact {% endblock title %}
+
+{% block body %}
+
+{% load static %}
+
+<div id="error-page">
+    <div class="content">
+        <div>
+            <img class="not_ready" src="{% static 'img/not-ready.svg'%}">
+        </div>
+        <h4 data-text="Page is Not Ready">
+            Page is Not Ready.
+        </h4>
+        <p>Sorry, the page you're looking for is not ready yet .</p>
+        <div class="btns">
+            <a href="/home">return home</a>
+        </div>
+    </div>
+</div>
+
+{% endblock body%}

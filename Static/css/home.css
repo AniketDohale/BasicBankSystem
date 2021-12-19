@@ -1,0 +1,156 @@
+.bank_head {
+    width: 200px;
+    height: 200px;
+}
+
+/* Card */
+.container {
+    display: flex;
+    margin-left: 150px;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    padding: 30px 0;
+}
+
+.container .card {
+    position: relative;
+    width: 320px;
+    height: 440px;
+    border-radius: 15px;
+    margin: 30px;
+}
+
+.container .card .box {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    background: white;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.container .card:hover .box {
+    transform: translateY(-30px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+}
+
+.container .card .box .content {
+    padding: 20px;
+    text-align: center;
+}
+
+.container .card .box .content h3 {
+    font-size: 1.8em;
+    color: #777;
+    z-index: 1;
+    transition: 0.5s;
+}
+
+.container .card .box .content p {
+    font-size: 1em;
+    font-weight: 300;
+    color: #777;
+    z-index: 1;
+    transition: 0.5s;
+}
+
+.container .card .box .content a {
+    position: relative;
+    display: inline-block;
+    padding: 8px 20px;
+    background: #00cccc;
+    margin-top: 15px;
+    border-radius: 20px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.container .card:hover .box .content a {
+    background: black;
+}
+
+.container .card .box .cust_img {
+    margin-top: 20px;
+    height: 170px;
+    width: 158px;
+}
+
+.container .card .box .profile_img {
+    margin-top: 20px;
+    height: 170px;
+    width: 170px;
+}
+
+.container .card .box .history_img {
+    margin-top: 20px;
+    height: 170px;
+    width: 170px;
+}
+
+/* Card End */
+
+/* Upper Cards */
+.wrapper {
+    width: 200px;
+    height: 160px;
+    width: 68%;
+    margin-left: 15%;
+    background: #fff;
+    border-radius: 15px;
+    padding: 5px 10px 5px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .content {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.content .home-bank {
+    height: 110px;
+    width: 110px;
+    border-radius: 10%;
+    overflow: hidden;
+}
+
+.content .quote-area .title {
+    font-size: 30px;
+    font-weight: 700;
+    color: #0d0925;
+    margin-left: 20px;
+    margin-bottom: 5px;
+}
+
+.content .quote-area .text {
+    color: #4e4a67;
+    font-size: 17px;
+    margin-left: 20px;
+    margin-bottom: 30px;
+    line-height: 1.5em;
+    text-align: justify;
+}
+
+/* Upper Cards End */
+
+@media (max-width:960px) {
+
+    .content .quote-area .title {
+        font-size: 18px;
+    }
+
+    .content .quote-area .text {
+        font-size: 12px;
+    }
+}
