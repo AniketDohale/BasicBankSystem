@@ -1,0 +1,80 @@
+table {
+    border-collapse: collapse;
+    border-radius: 0.5em;
+    overflow: hidden;
+    border-spacing: 0;
+    width: 100%;
+    margin-left: 20%;
+    margin-right: 20%;
+    border: 1px solid #ddd;
+}
+
+.customer_head {
+    max-width: 650px;
+    margin: 60px 100px;
+    color: #226A80;
+    font-size: 55px;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 2px;
+    line-height: 60px;
+    margin-bottom: 30px;
+}
+
+/*  Transaction History*/
+.transct_history {
+    text-align: right;
+    padding-right: 5%;
+    padding-bottom: 20px;
+}
+
+.transct_history a {
+    text-decoration: none;
+    padding: 10px 30px;
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: 400;
+    background: #00cccc;
+
+}
+
+.transct_history a:hover {
+    background: #262626;
+}
+
+/*  Transaction History End */
+
+th, td {
+    text-align: center;
+    padding: 15px;
+}
+
+tr:nth-child(odd) {
+    background-color: #f3f3f3;
+}
+
+tr:nth-child(even) {
+    background-color: #fff;
+}
+
+th {
+    background-color: #00cccc;
+    color: white;
+}
+
+tr:nth-child(even):hover {
+    background-color: black;
+    color: white;
+}
+
+tr:nth-child(odd):hover {
+    background-color: black;
+    color: white;
+}
+
+tr[data-href] {
+    cursor: pointer;
+}
